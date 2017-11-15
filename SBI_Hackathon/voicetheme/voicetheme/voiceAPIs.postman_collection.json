@@ -1,0 +1,129 @@
+{
+	"variables": [],
+	"info": {
+		"name": "voiceAPIs_23_10_17",
+		"_postman_id": "4cec2121-adfb-2599-23c1-2db5ef5d2308",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insertVoice",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/VoiceAuthCreate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "TEAM_ID",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "ACCOUNT_NO",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "NAME",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "MIME_TYPE",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "ENCODING",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "VOI_SIZE",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getVoiceByTeam",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/VoiceAuthInfo/1000",
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getVoiceByTeam/AccountNo",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/VoiceAuthInfo/1000/12341234123",
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getVoiceByTeam/AccountNo/VoiceSample",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/VoiceAuthInfo/1000/12341234123/VOICE_SAMPLE",
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,124 @@
+{
+	"variables": [],
+	"info": {
+		"name": "faceAPIs_27_10_17",
+		"_postman_id": "5d1fca0d-38f5-8502-46b7-906f3e9b3c1d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insertFace",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/FaceRecogCreate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "TEAM_ID",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "NAME",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "ACCOUNT_NO",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "MIME_TYPE",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "AADHAAR_NO",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "ENCODING",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "IMG_SIZE",
+						"value": "",
+						"description": ""
+					},
+					{
+						"key": "I_DATE",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getFacebyTeam",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/FaceRecogInfo/1000",
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getFacebyTeam/Account",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/FaceRecogInfo/1000/12341234123",
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getFacebyTeam/Account/image",
+			"request": {
+				"url": "http://apiplatformcloudse-gseapicssbisecond-uqlpluu8.srv.ravcloud.com:8001/FaceRecogInfo/1000/12341234123/FACE_IMAGE",
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
