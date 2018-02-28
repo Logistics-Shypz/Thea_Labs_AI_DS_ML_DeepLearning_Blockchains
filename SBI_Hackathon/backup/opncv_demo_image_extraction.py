@@ -13,10 +13,10 @@ region_amount_words = img_raw[150:250,200:900]
 
 def extract(region):
 	region = cv2.cvtColor(region, cv2.COLOR_BGR2GRAY)
-	ret, mask = cv2.threshold(region, 120, 255, cv2.THRESH_BINARY)
+	ret, mask = cv2.threshold(region, 160, 255, cv2.THRESH_BINARY)
 
 	region = cv2.bitwise_and(region, region, mask=mask)
-	ret, region = cv2.threshold(region, 120, 255, cv2.THRESH_BINARY)
+	ret, region = cv2.threshold(region, 160, 255, cv2.THRESH_BINARY)
 	kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (3,3))
 
 	dilated = cv2.dilate(region, kernel, iterations=9)
@@ -51,15 +51,27 @@ def extract(region):
 		'''
 
 	return region
+#200,150,986,204 : words 
+#930,40,1123,68 : date
+#930,200,1099,228 : amt
+#t = img_raw[40:68,930:1123]
+#reg_words = img_raw[150:204,200:986]
+#reg_date = img_raw[0:100,800:1200]
+#reg_micr = img_raw[400:500,230:430][70:,75:190]
+#reg_amt = img_raw[150:250,850:1200][35:95,70:310]
 
-reg_words = img_raw[150:250,200:900]
-reg_date = img_raw[0:100,800:1200]
+
+
+reg_words = img_raw[150:204,200:986]
+reg_date = img_raw[40:68,930:1123]
 reg_micr = img_raw[400:500,230:430][70:,75:190]
-reg_amt = img_raw[150:250,850:1200][35:95,70:310]
+reg_amt = img_raw[200:228,930:1099]
 amount_in_words = extract(reg_words)
 cheque_date = extract(reg_date)
 micr = extract(reg_micr)
 amt = extract(reg_amt)
+
+#t1 = extract(t)
 
 
 
@@ -72,7 +84,7 @@ amt = extract(reg_amt)
 
 
 
-#cv2.imshow('new_img',reg_words)
+#cv2.imshow('new_img',t1)
 cv2.imwrite('words_img_cheque.png',amount_in_words)
 cv2.imwrite('cheque_date.png',cheque_date)
 cv2.imwrite('micr.png',micr)
